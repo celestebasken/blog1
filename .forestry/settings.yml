@@ -4,12 +4,17 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
+- type: document
+  path: interests/**/*.md
+  label: Interests
+  match: "**/*"
 - type: directory
   path: projects
   label: Projects
   create: documents
   match: "**/*.md"
   templates:
+  - project
   - project
 - type: directory
   path: journal
